@@ -11,3 +11,7 @@ Permadeath rules, horror and tense atmosphere.
 Inspirations: Darkest Dungeon, Rogue
 
 https://journal.stuffwithstuff.com/2014/12/21/rooms-and-mazes/
+
+https://www.youtube.com/watch?v=0YXoq12Devw
+
+https://www.youtube.com/watch?v=Aagh25qg59w&feature=youtu.be
