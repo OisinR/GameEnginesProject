@@ -14,4 +14,4 @@ https://journal.stuffwithstuff.com/2014/12/21/rooms-and-mazes/
 
 https://www.youtube.com/watch?v=0YXoq12Devw
 
-https://www.youtube.com/watch?v=Aagh25qg59w&feature=youtu.be
+https://gamedevelopment.tutsplus.com/tutorials/bake-your-own-3d-dungeons-with-procedural-recipes--gamedev-14360
