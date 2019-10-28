@@ -8,4 +8,6 @@ Once the player collects enough loot to complete the game, they must retrace the
 
 Permadeath rules, horror and tense atmosphere.
 
-Inspiration: Darkest Dungeon
+Inspirations: Darkest Dungeon, Rogue
+
+https://journal.stuffwithstuff.com/2014/12/21/rooms-and-mazes/
