@@ -13,7 +13,7 @@ public class FloodFill : MonoBehaviour
 
     private void Start()
     {
-        currentTile = TileGenerator.tileGrid[Random.Range(0,TileGenerator.height), Random.Range(0,TileGenerator.width)];
+        currentTile = TileGenerator.tileGrid[0,0]; //[Random.Range(0,TileGenerator.height), Random.Range(0,TileGenerator.width)];
         
         Carve();
     }
@@ -31,39 +31,41 @@ public class FloodFill : MonoBehaviour
 
     private void Update()
     {
-        
+        Debug.Log(tiles.Count);
 
-        if (TileGenerator.cells.Count != visited.Count)
+        if (TileGenerator.cells.Count > tiles.Count-2)
         {
-            Debug.Log(1);
+            //Debug.Log(1);
             List<Tile> unmade = new List<Tile>();
 
             foreach (Tile i in currentTile.neighbors)
             {
-                if (canCarve(i) && !tiles.Contains(i))
+                if (!tiles.Contains(i) && !visited.Contains(i))
                 {
-                    tiles.Add(i);
-                    unmade.Add(i);
+                    if(canCarve(i))
+                    {
+                        tiles.Add(i);
+                        unmade.Add(i);
+                    }
+                    
                 }
 
             }
             if (unmade.Count == 0)
             {
-                if (tiles.Contains(currentTile))
-                {
-                    Debug.Log(2);
-                    tiles.Remove(currentTile);
-                }
 
-                currentTile = lastTile;
-                Debug.Log(3);
+                //Debug.Log(2);
+                tiles.Remove(currentTile);
+                
+
+
                 currentTile = tiles.Last();
             }
             else
             {
                 lastTile = currentTile;
-                currentTile = unmade.Last();
-                Debug.Log(4);
+                currentTile = tiles.Last();
+                //Debug.Log(4);
             }
             
 
@@ -73,21 +75,22 @@ public class FloodFill : MonoBehaviour
             }
 
         }
-
+        Debug.Log("End");
     }
 
-    bool canCarve(Tile tile)
+    bool canCarve(Tile j)
     {
-        foreach (Tile i in tile.neighbors)
+        foreach (Tile i in j.neighbors)
         {
-            if (visited.Contains(i))
+            //Debug.Log(222);
+            if (visited.Contains(i) || i.gameObject.GetComponent<MeshRenderer>().enabled)
             {
                 if(i != currentTile)
                 {
+                    Debug.Log(223);
                     return false;
-                }
                     
-                  
+                }  
             }
         }
         
