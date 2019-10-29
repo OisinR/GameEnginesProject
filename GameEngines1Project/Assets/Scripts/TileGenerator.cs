@@ -6,8 +6,8 @@ public class TileGenerator : MonoBehaviour
 {
     //these are static so that Tile can easily access them
     public static Tile[,] tileGrid;
-    public static int width = 100;
-    public static int height = 100;
+    public static int width = 11;
+    public static int height = 11;
 
     public GameObject tilePrefab;
 
