@@ -5,6 +5,7 @@ using UnityEngine;
 public class TileGenerator : MonoBehaviour
 {
     //these are static so that Tile can easily access them
+    public static List<Tile> cells = new List<Tile>();
     public static Tile[,] tileGrid;
     public static int width = 11;
     public static int height = 11;
@@ -22,6 +23,7 @@ public class TileGenerator : MonoBehaviour
                 GameObject newTileGO = Instantiate(tilePrefab);
                 Tile newTile = newTileGO.GetComponent<Tile>();
                 tileGrid[x, y] = newTile;
+                cells.Add(newTile);
                 newTile.x = x;
                 newTile.y = y;
             }
