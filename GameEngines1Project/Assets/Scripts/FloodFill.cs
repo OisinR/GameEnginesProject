@@ -57,12 +57,12 @@ public class FloodFill : MonoBehaviour
 
                 currentTile = lastTile;
                 Debug.Log(3);
-                currentTile = tiles[Random.Range(0, tiles.Count)];
+                currentTile = tiles.Last();
             }
             else
             {
                 lastTile = currentTile;
-                currentTile = unmade[Random.Range(0, unmade.Count)];
+                currentTile = unmade.Last();
                 Debug.Log(4);
             }
             
