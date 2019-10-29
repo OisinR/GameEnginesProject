@@ -14,16 +14,18 @@ public class FloodFill : MonoBehaviour
     private void Start()
     {
         currentTile = TileGenerator.tileGrid[Random.Range(0,TileGenerator.height), Random.Range(0,TileGenerator.width)];
-        currentTile.GetComponent<MeshRenderer>().enabled = true;
-        tiles.Add(currentTile);
-        visited.Add(currentTile);
+        Carve(currentTile);
     }
 
 
     //choose a viable neighbour : hasnt been visited and isnt adjacent to a tile that has been
 
-    
     //after carving into a tile, remember the direction of the carve and disable the tiles to the side
+
+    //carve into neighbour and repeat
+
+    //if dont find viable neighbour, remove from list and flag as visited
+
 
 
     private void Update()
@@ -35,11 +37,14 @@ public class FloodFill : MonoBehaviour
                 tiles.Add(i);
             }
         }
+
+        currentTile = tiles[Random.Range(0, tiles.Count)];
+        Carve(currentTile);
     }
 
     bool canCarve(Tile tile)
     {
-        if(!tile.gameObject.GetComponent<MeshRenderer>().enabled)
+        if(!tile.gameObject.GetComponent<MeshRenderer>().enabled || )
         {
             return true;
         }
@@ -50,9 +55,15 @@ public class FloodFill : MonoBehaviour
         
     }
 
-    //carve into neighbour and repeat
+    void Carve(Tile tile)
+    {
+        currentTile.GetComponent<MeshRenderer>().enabled = true;
+        tiles.Add(currentTile);
+        visited.Add(currentTile);
+    }
 
-    //if dont find viable neighbour, remove from list and flag as visited
+
+
 
 
 }
