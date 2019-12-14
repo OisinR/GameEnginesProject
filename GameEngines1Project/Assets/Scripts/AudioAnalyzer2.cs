@@ -19,7 +19,7 @@ public class AudioAnalyzer2 : MonoBehaviour
 
     //64
     public static float[] freqBand64 = new float[64];
-    public static float[] bandBuffer64 = new float[46];
+    public static float[] bandBuffer64 = new float[64];
     public static float[] bufferDecrease64 = new float[64];
     float[] freqBandHighest64 = new float[64];
     public float[] audioBand64, bufferBand64;
@@ -34,10 +34,10 @@ public class AudioAnalyzer2 : MonoBehaviour
     void Start()
     {
         audioBand = new float[8];
-        bandBuffer = new float[8];
+        bufferBand = new float[8];
 
         audioBand64 = new float[64];
-        bandBuffer64 = new float[64];
+        bufferBand64 = new float[64];
 
         speaker = GetComponent<AudioSource>();
         AudioProfile(aP);
@@ -191,7 +191,7 @@ public class AudioAnalyzer2 : MonoBehaviour
                 freqBandHighest[i] = freqBand[i];
             }
             audioBand[i] = (freqBand[i] / freqBandHighest[i]);
-            bandBuffer[i] = (bandBuffer[i] / freqBandHighest[i]);
+            bufferBand[i] = (bandBuffer[i] / freqBandHighest[i]);
         }
     }
 
@@ -204,7 +204,7 @@ public class AudioAnalyzer2 : MonoBehaviour
                 freqBandHighest64[i] = freqBand64[i];
             }
             audioBand64[i] = (freqBand64[i] / freqBandHighest64[i]);
-            bandBuffer64[i] = (bandBuffer64[i] / freqBandHighest64[i]);
+            bufferBand64[i] = (bandBuffer64[i] / freqBandHighest64[i]);
         }
     }
 
