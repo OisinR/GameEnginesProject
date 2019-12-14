@@ -327,6 +327,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CubeHolder (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 7230560137827774503, guid: 6cab671f5ad246f488edf01bec746700,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1226963199037614544, guid: 6cab671f5ad246f488edf01bec746700,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -401,6 +406,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CubeHolder (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230560137827774503, guid: 6cab671f5ad246f488edf01bec746700,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1226963199037614544, guid: 6cab671f5ad246f488edf01bec746700,
         type: 3}
@@ -618,6 +628,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CubeHolder (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230560137827774503, guid: 6cab671f5ad246f488edf01bec746700,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1226963199037614544, guid: 6cab671f5ad246f488edf01bec746700,
         type: 3}
@@ -930,6 +945,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CubeHolder (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 7230560137827774503, guid: 6cab671f5ad246f488edf01bec746700,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1226963199037614544, guid: 6cab671f5ad246f488edf01bec746700,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1199,6 +1219,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CubeHolder (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 7230560137827774503, guid: 6cab671f5ad246f488edf01bec746700,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1226963199037614544, guid: 6cab671f5ad246f488edf01bec746700,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1370,6 +1395,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CubeHolder (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230560137827774503, guid: 6cab671f5ad246f488edf01bec746700,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1226963199037614544, guid: 6cab671f5ad246f488edf01bec746700,
         type: 3}
@@ -2083,6 +2113,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CubeHolder (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 7230560137827774503, guid: 6cab671f5ad246f488edf01bec746700,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1226963199037614544, guid: 6cab671f5ad246f488edf01bec746700,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2201,6 +2236,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CubeHolder (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230560137827774503, guid: 6cab671f5ad246f488edf01bec746700,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1226963199037614544, guid: 6cab671f5ad246f488edf01bec746700,
         type: 3}

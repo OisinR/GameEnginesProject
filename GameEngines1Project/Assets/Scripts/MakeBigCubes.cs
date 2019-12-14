@@ -10,7 +10,7 @@ public class MakeBigCubes : MonoBehaviour
     
     void Start()
     {
-        for (int i = 0; i<512; i++)
+        for (int i = 0; i < 512; i++)
         {
             GameObject instance = (GameObject)Instantiate(cubePrefab);
             instance.transform.position = transform.position;
