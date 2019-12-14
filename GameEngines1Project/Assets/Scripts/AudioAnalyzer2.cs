@@ -10,7 +10,11 @@ public class AudioAnalyzer2 : MonoBehaviour
     public static float[] samples = new float[512];
     public static float[] freqBand = new float[8];
     public static float[] bandBuffer = new float[8];
-    float[] bufferDecrease = new float[8];
+    public static float[] bufferDecrease = new float[8];
+
+    float[] freqBandHighest = new float[8];
+    public static float[] audioBand = new float[8];
+    public static float[] bufferBand = new float[8];
 
     void Start()
     {
@@ -23,6 +27,7 @@ public class AudioAnalyzer2 : MonoBehaviour
         GetSpectrumData();
         MakeFreqBands();
         BandBuffer();
+        CreateAudioBands();
     }
 	
     void GetSpectrumData()
@@ -72,5 +77,16 @@ public class AudioAnalyzer2 : MonoBehaviour
     }
 
 
-
+    void CreateAudioBands()
+    {
+        for (int i = 0; i<8; i ++)
+        {
+            if(freqBand[i] > freqBandHighest[i])
+            {
+                freqBandHighest[i] = freqBand[i];
+            }
+            audioBand[i] = (freqBand[i] / freqBandHighest[i]);
+            bufferBand[i] = (bandBuffer[i] / freqBandHighest[i]);
+        }
+    }
 }
