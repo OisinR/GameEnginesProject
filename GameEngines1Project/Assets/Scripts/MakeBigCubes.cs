@@ -17,7 +17,7 @@ public class MakeBigCubes : MonoBehaviour
             instance.transform.parent = transform;
             instance.name = "Cube " + i;
             transform.eulerAngles = new Vector3(0, -0.73125f * i, 0);
-            instance.transform.position = Vector3.forward * 500;
+            instance.transform.position = Vector3.forward * 3;
             cubes[i] = instance;
         }
     }
@@ -29,7 +29,7 @@ public class MakeBigCubes : MonoBehaviour
         {
             if (cubes != null)
             {
-                cubes[i].transform.localScale = new Vector3(10, AudioAnalyzer2.samples[i] * scale,10);
+                cubes[i].transform.localScale = new Vector3(1, AudioAnalyzer2.samplesL[i] * scale,1);
             }
         }
     }
