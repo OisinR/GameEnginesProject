@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class FormCubes : MonoBehaviour
 {
-    public GameObject cubePrefab;
+    public GameObject cubePrefab,  cylen2;
     public float radius = 50;
     public float rotaion = 30;
-    public bool use64;
-
+    public bool use64, cylen;
+    public float scaleW = 1.5f;
+    public float scaleH = 0.5f;
+    public float scaleCyl = 1f;
 
     void Start()
     {
@@ -24,12 +26,20 @@ public class FormCubes : MonoBehaviour
 
                 GameObject cube = Instantiate(cubePrefab);
                 cube.transform.SetPositionAndRotation(p, q);
-                cube.transform.localScale = new Vector3(0.5f, 1f, 0.5f);
+                cube.transform.localScale = new Vector3(scaleW, scaleH, scaleW);
                 cube.transform.parent = this.transform;
+                if(cylen)
+                {
+                    GameObject cyl = Instantiate(cylen2);
+                    cyl.transform.SetPositionAndRotation(p, q);
+                    cyl.transform.localScale = new Vector3(scaleCyl, scaleH, scaleCyl);
+                    cyl.transform.parent = this.transform;
+                }
                 ParamCube pC = cube.AddComponent<ParamCube>();
                 pC.band = i;
+                pC.useBuffer = true;
                 pC.startScale = 0.5f;
-                pC.scaleMult = 0.5f;
+                pC.scaleMult = 0.05f;
 
                 //elements.Add(cube);
             }
@@ -46,8 +56,15 @@ public class FormCubes : MonoBehaviour
 
                 GameObject cube = Instantiate(cubePrefab);
                 cube.transform.SetPositionAndRotation(p, q);
-                cube.transform.localScale = new Vector3(0.5f, 1f, 0.5f);
+                cube.transform.localScale = new Vector3(scaleW, scaleH, scaleW);
                 cube.transform.parent = this.transform;
+                if (cylen)
+                {
+                    GameObject cyl = Instantiate(cylen2);
+                    cyl.transform.SetPositionAndRotation(p, q);
+                    cyl.transform.localScale = new Vector3(scaleCyl, scaleH, scaleCyl);
+                    cyl.transform.parent = this.transform;
+                }
                 ParamCube pC = cube.AddComponent<ParamCube>();
                 pC.use64 = true;
                 pC.useBuffer = true;
@@ -63,7 +80,7 @@ public class FormCubes : MonoBehaviour
     
     void Update()
     {
-        transform.Rotate(Vector3.up, rotaion * Time.deltaTime);
+        transform.Rotate(Vector3.up, (AudioAnalyzer2.amplitude * 5) * rotaion * Time.deltaTime);
     }
 	
 }

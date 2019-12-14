@@ -15,14 +15,14 @@ public class AudioAnalyzer2 : MonoBehaviour
     public static float[] bandBuffer = new float[8];
     public static float[] bufferDecrease = new float[8];
     float[] freqBandHighest = new float[8];
-    public float[] audioBand, bufferBand;
+    public static float[] audioBand, bufferBand;
 
     //64
     public static float[] freqBand64 = new float[64];
     public static float[] bandBuffer64 = new float[64];
     public static float[] bufferDecrease64 = new float[64];
     float[] freqBandHighest64 = new float[64];
-    public float[] audioBand64, bufferBand64;
+    public static float[] audioBand64, bufferBand64;
 
     public static float amplitude, ampBuffer;
     float amplitudeHighest;
