@@ -51,19 +51,23 @@ public class FormCubes : MonoBehaviour
             {
                 Vector3 p = new Vector3(Mathf.Sin(theta * i) * radius, 0, Mathf.Cos(theta * i) * radius);
                 p = transform.TransformPoint(p);
-                Quaternion q = Quaternion.AngleAxis(theta * i * Mathf.Rad2Deg, Vector3.up);
+                Quaternion q = Quaternion.AngleAxis(theta * i * Mathf.Rad2Deg, Vector3.up); 
                 q = transform.rotation * q;
 
                 GameObject cube = Instantiate(cubePrefab);
                 cube.transform.SetPositionAndRotation(p, q);
                 cube.transform.localScale = new Vector3(scaleW, scaleH, scaleW);
                 cube.transform.parent = this.transform;
+                cube.transform.LookAt(new Vector3(0, 0, 0));
+                //cube.transform.localRotation = Quaternion.Euler(-90, 0, 0);
                 if (cylen)
                 {
                     GameObject cyl = Instantiate(cylen2);
                     cyl.transform.SetPositionAndRotation(p, q);
                     cyl.transform.localScale = new Vector3(scaleCyl, scaleH, scaleCyl);
                     cyl.transform.parent = this.transform;
+                    cyl.transform.LookAt(new Vector3(0, 0, 0));
+                    //cyl.transform.eulerAngles = new Vector3(-90, transform.rotation.y, transform.rotation.z);
                 }
                 ParamCube pC = cube.AddComponent<ParamCube>();
                 pC.use64 = true;
@@ -71,7 +75,8 @@ public class FormCubes : MonoBehaviour
                 pC.band = i;
                 pC.startScale = 0.3f;
                 pC.scaleMult = 0.25f;
-
+                
+                
                 //elements.Add(cube);
             }
         }

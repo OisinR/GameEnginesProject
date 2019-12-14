@@ -4,9 +4,18 @@ using UnityEngine;
 
 public class Rotate : MonoBehaviour
 {
+    public bool useRandom;
     public float rotaion = 30;
     public enum Direction { up, down, left, right  };
     public Direction direction = new Direction();
+
+    private void Start()
+    {
+        if(useRandom)
+        {
+            direction = (Direction)Random.Range(0, 3);
+        }
+    }
 
     void Update()
     {
