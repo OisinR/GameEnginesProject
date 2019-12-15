@@ -14,7 +14,7 @@ public class AudioAnalyzer2 : MonoBehaviour
     public static float[] freqBand = new float[8];
     public static float[] bandBuffer = new float[8];
     public static float[] bufferDecrease = new float[8];
-    float[] freqBandHighest = new float[8];
+    public float[] freqBandHighest = new float[8];
     public static float[] audioBand, bufferBand;
 
     //64
@@ -24,7 +24,8 @@ public class AudioAnalyzer2 : MonoBehaviour
     float[] freqBandHighest64 = new float[64];
     public static float[] audioBand64, bufferBand64;
 
-    public static float amplitude, ampBuffer;
+    public static float amplitude = 0.01f;
+    public static float ampBuffer;
     float amplitudeHighest;
     public float aP;
 
@@ -223,6 +224,10 @@ public class AudioAnalyzer2 : MonoBehaviour
             amplitudeHighest = currentAmp;
         }
         amplitude = currentAmp / amplitudeHighest;
+        if(amplitude == 1)
+        {
+            amplitude = 0.01f;
+        }
         ampBuffer = currentAmpBuffer / amplitudeHighest;
 
     }

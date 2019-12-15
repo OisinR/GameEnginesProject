@@ -16,7 +16,6 @@ public class PointDistribution : MonoBehaviour
 
         foreach (Vector3 value in pts)
         {
-            Debug.Log(i);
             GameObject cube = Instantiate(cubePrefab);
             uspheres.Add(cube);
             cube.GetComponent<ParamCube2>().band = bandNo;

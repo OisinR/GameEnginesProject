@@ -58,7 +58,7 @@ public class FormCubes : MonoBehaviour
                 cube.transform.SetPositionAndRotation(p, q);
                 cube.transform.localScale = new Vector3(scaleW, scaleH, scaleW);
                 cube.transform.parent = this.transform;
-                cube.transform.LookAt(new Vector3(0, 0, 0));
+
                 //cube.transform.localRotation = Quaternion.Euler(-90, 0, 0);
                 if (cylen)
                 {
@@ -66,7 +66,6 @@ public class FormCubes : MonoBehaviour
                     cyl.transform.SetPositionAndRotation(p, q);
                     cyl.transform.localScale = new Vector3(scaleCyl, scaleH, scaleCyl);
                     cyl.transform.parent = this.transform;
-                    cyl.transform.LookAt(new Vector3(0, 0, 0));
                     //cyl.transform.eulerAngles = new Vector3(-90, transform.rotation.y, transform.rotation.z);
                 }
                 ParamCube pC = cube.AddComponent<ParamCube>();
@@ -86,6 +85,7 @@ public class FormCubes : MonoBehaviour
     void Update()
     {
         transform.Rotate(Vector3.up, (AudioAnalyzer2.amplitude * 5) * rotaion * Time.deltaTime);
+        Debug.Log(AudioAnalyzer2.amplitude);
     }
 	
 }
