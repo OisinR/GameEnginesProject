@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Channel { Stereo, left, Right };
 
 [RequireComponent (typeof (AudioSource))]
 public class AudioAnalyzer : MonoBehaviour
@@ -14,7 +15,7 @@ public class AudioAnalyzer : MonoBehaviour
     public static float[] freqBand = new float[8];
     public static float[] bandBuffer = new float[8];
     public static float[] bufferDecrease = new float[8];
-    public float[] freqBandHighest = new float[8];
+    float[] freqBandHighest = new float[8];
     public static float[] audioBand, bufferBand;
 
     //64
@@ -28,7 +29,7 @@ public class AudioAnalyzer : MonoBehaviour
     public static float ampBuffer;
     float amplitudeHighest;
 
-    public enum Channel { Stereo, left, Right};
+    
     public Channel channel = new Channel();
 
     void Start()
@@ -224,3 +225,5 @@ public class AudioAnalyzer : MonoBehaviour
 
 
 }
+
+

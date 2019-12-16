@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FormCubes : MonoBehaviour
 {
+    public Slider rotSpeed;
     public GameObject cubePrefab,  cylen2;
     public float radius = 50;
     public float rotaion = 30;
@@ -84,8 +86,8 @@ public class FormCubes : MonoBehaviour
     
     void Update()
     {
-        transform.Rotate(Vector3.up, (AudioAnalyzer.amplitude * 5) * rotaion * Time.deltaTime);
-        Debug.Log(AudioAnalyzer.amplitude);
+        transform.Rotate(Vector3.up, (AudioAnalyzer.amplitude * 5) * rotSpeed.value * rotaion * Time.deltaTime);
+        //Debug.Log(AudioAnalyzer.amplitude);
     }
 	
 }

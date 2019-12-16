@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioController : MonoBehaviour
 {
-    bool doneyet;
+
     AudioSource speaker;
     void Start()
     {
@@ -16,13 +16,13 @@ public class AudioController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.R))
         {
-            doneyet = true;
+
             speaker.Stop();
         }
 
         if(Input.GetButtonDown("Jump") && !speaker.isPlaying)
         {
-            Debug.Log(12341);
+            Debug.Log(speaker.panStereo);
             speaker.Play();
         }
     }
