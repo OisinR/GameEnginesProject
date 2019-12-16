@@ -29,7 +29,7 @@ public class MakeBigCubes : MonoBehaviour
         {
             if (cubes != null)
             {
-                cubes[i].transform.localScale = new Vector3(1, AudioAnalyzer2.samplesL[i] * scale/10,1);
+                cubes[i].transform.localScale = new Vector3(1, AudioAnalyzer.samplesL[i] * scale/10,1);
             }
         }
     }

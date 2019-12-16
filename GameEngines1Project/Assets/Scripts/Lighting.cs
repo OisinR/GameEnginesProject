@@ -17,7 +17,7 @@ public class Lighting : MonoBehaviour
     
     void Update()
     {
-        bulb.intensity = (AudioAnalyzer2.bandBuffer[band] * (max - min)) + min;
+        bulb.intensity = (AudioAnalyzer.bandBuffer[band] * (max - min)) + min;
     }
 	
 }

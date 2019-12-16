@@ -19,6 +19,6 @@ public class Ring : MonoBehaviour
     void Update()
     {
         Color colour = new Color(1, 1, 1, 1);
-        mat.SetColor("_EmissionColor", colour * AudioAnalyzer2.amplitude);
+        mat.SetColor("_EmissionColor", colour * AudioAnalyzer.amplitude);
     }
 }

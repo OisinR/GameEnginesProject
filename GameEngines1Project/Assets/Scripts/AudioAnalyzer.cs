@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [RequireComponent (typeof (AudioSource))]
-public class AudioAnalyzer2 : MonoBehaviour
+public class AudioAnalyzer : MonoBehaviour
 {
     AudioSource speaker;
     public static float[] samplesL = new float[512];

@@ -19,16 +19,16 @@ public class ScaleOnAmp : MonoBehaviour
     {
         if (useBuffer)
         {
-            transform.localScale = new Vector3((AudioAnalyzer2.amplitude * maxScale) + startScale, transform.localScale.y, (AudioAnalyzer2.amplitude * maxScale) + startScale);
+            transform.localScale = new Vector3((AudioAnalyzer.amplitude * maxScale) + startScale, transform.localScale.y, (AudioAnalyzer.amplitude * maxScale) + startScale);
 
-            Color colour = new Color(AudioAnalyzer2.amplitude * red, AudioAnalyzer2.amplitude * green, AudioAnalyzer2.amplitude * blue);
+            Color colour = new Color(AudioAnalyzer.amplitude * red, AudioAnalyzer.amplitude * green, AudioAnalyzer.amplitude * blue);
             mat.SetColor("_EmissionColor", colour);
         }
         else
         {
-            transform.localScale = new Vector3((AudioAnalyzer2.ampBuffer * maxScale) + startScale, transform.localScale.y, (AudioAnalyzer2.ampBuffer * maxScale) + startScale);
+            transform.localScale = new Vector3((AudioAnalyzer.ampBuffer * maxScale) + startScale, transform.localScale.y, (AudioAnalyzer.ampBuffer * maxScale) + startScale);
 
-            Color colour = new Color(AudioAnalyzer2.ampBuffer * red, AudioAnalyzer2.ampBuffer * green, AudioAnalyzer2.ampBuffer * blue);
+            Color colour = new Color(AudioAnalyzer.ampBuffer * red, AudioAnalyzer.ampBuffer * green, AudioAnalyzer.ampBuffer * blue);
             mat.SetColor("_EmissionColor", colour);
         }
     }

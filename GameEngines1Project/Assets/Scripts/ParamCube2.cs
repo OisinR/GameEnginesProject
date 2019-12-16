@@ -22,34 +22,34 @@ public class ParamCube2 : MonoBehaviour
         {
             if (useBuffer)
             {
-                transform.localScale = new Vector3((AudioAnalyzer2.bandBuffer[band] * scaleMult), (AudioAnalyzer2.bandBuffer[band] * scaleMult), (AudioAnalyzer2.bandBuffer[band] * scaleMult) + startScale);
+                transform.localScale = new Vector3((AudioAnalyzer.bandBuffer[band] * scaleMult), (AudioAnalyzer.bandBuffer[band] * scaleMult), (AudioAnalyzer.bandBuffer[band] * scaleMult) + startScale);
 
                 Color colour = new Color(1, 0, 0, 1);
-                mat.SetColor("_EmissionColor", colour * AudioAnalyzer2.audioBand[band] * 10);
+                mat.SetColor("_EmissionColor", colour * AudioAnalyzer.audioBand[band] * 10);
             }
             else
             {
-                transform.localScale = new Vector3(transform.localScale.x, (AudioAnalyzer2.freqBand[band] * scaleMult) + startScale, transform.localScale.z);
+                transform.localScale = new Vector3(transform.localScale.x, (AudioAnalyzer.freqBand[band] * scaleMult) + startScale, transform.localScale.z);
 
-                Color colour = new Color(AudioAnalyzer2.bandBuffer[band], AudioAnalyzer2.bandBuffer[band], AudioAnalyzer2.bandBuffer[band]);
-                mat.SetColor("_EmissionColor", colour * AudioAnalyzer2.audioBand64[band] * 10);
+                Color colour = new Color(AudioAnalyzer.bandBuffer[band], AudioAnalyzer.bandBuffer[band], AudioAnalyzer.bandBuffer[band]);
+                mat.SetColor("_EmissionColor", colour * AudioAnalyzer.audioBand64[band] * 10);
             }
         }
         else
         {
             if (useBuffer)
             {
-                transform.localScale = new Vector3((AudioAnalyzer2.bandBuffer64[band] * scaleMult) + startScale, (AudioAnalyzer2.bandBuffer64[band] * scaleMult) + startScale, (AudioAnalyzer2.bandBuffer64[band] * scaleMult) + startScale);
+                transform.localScale = new Vector3((AudioAnalyzer.bandBuffer64[band] * scaleMult) + startScale, (AudioAnalyzer.bandBuffer64[band] * scaleMult) + startScale, (AudioAnalyzer.bandBuffer64[band] * scaleMult) + startScale);
 
                 Color colour = new Color(0, 0, 1, 1);
-                mat.SetColor("_EmissionColor", colour * AudioAnalyzer2.audioBand64[band] * 10);
+                mat.SetColor("_EmissionColor", colour * AudioAnalyzer.audioBand64[band] * 10);
             }
             else
             {
-                transform.localScale = new Vector3(transform.localScale.x, (AudioAnalyzer2.freqBand64[band] * scaleMult) + startScale, transform.localScale.z);
+                transform.localScale = new Vector3(transform.localScale.x, (AudioAnalyzer.freqBand64[band] * scaleMult) + startScale, transform.localScale.z);
 
-                Color colour = new Color(AudioAnalyzer2.bandBuffer64[band], AudioAnalyzer2.bandBuffer64[band], AudioAnalyzer2.bandBuffer64[band]);
-                mat.SetColor("_EmissionColor", colour * AudioAnalyzer2.audioBand64[band] * 10);
+                Color colour = new Color(AudioAnalyzer.bandBuffer64[band], AudioAnalyzer.bandBuffer64[band], AudioAnalyzer.bandBuffer64[band]);
+                mat.SetColor("_EmissionColor", colour * AudioAnalyzer.audioBand64[band] * 10);
             }
         }
     }

@@ -21,19 +21,19 @@ public class Rotate : MonoBehaviour
     {
         if (direction == Direction.up)
         {
-            transform.Rotate(Vector3.up, (AudioAnalyzer2.amplitude * 5) * rotaion * Time.deltaTime);
+            transform.Rotate(Vector3.up, (AudioAnalyzer.amplitude * 5) * rotaion * Time.deltaTime);
         }
         if (direction == Direction.down)
         {
-            transform.Rotate(Vector3.down, (AudioAnalyzer2.amplitude * 5) * rotaion * Time.deltaTime);
+            transform.Rotate(Vector3.down, (AudioAnalyzer.amplitude * 5) * rotaion * Time.deltaTime);
         }
         if (direction == Direction.left)
         {
-            transform.Rotate(Vector3.left, (AudioAnalyzer2.amplitude * 5) * rotaion * Time.deltaTime);
+            transform.Rotate(Vector3.left, (AudioAnalyzer.amplitude * 5) * rotaion * Time.deltaTime);
         }
         if (direction == Direction.right)
         {
-            transform.Rotate(Vector3.right, (AudioAnalyzer2.amplitude * 5) * rotaion * Time.deltaTime);
+            transform.Rotate(Vector3.right, (AudioAnalyzer.amplitude * 5) * rotaion * Time.deltaTime);
         }
 
 

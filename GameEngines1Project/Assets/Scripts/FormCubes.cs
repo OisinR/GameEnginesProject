@@ -16,8 +16,8 @@ public class FormCubes : MonoBehaviour
     {
         if (use64)
         {
-            float theta = (Mathf.PI * 2.0f) / (float)AudioAnalyzer2.bandBuffer64.Length;
-            for (int i = 0; i < AudioAnalyzer2.bandBuffer64.Length; i += 1)
+            float theta = (Mathf.PI * 2.0f) / (float)AudioAnalyzer.bandBuffer64.Length;
+            for (int i = 0; i < AudioAnalyzer.bandBuffer64.Length; i += 1)
             {
                 Vector3 p = new Vector3(Mathf.Sin(theta * i) * radius, 0, Mathf.Cos(theta * i) * radius);
                 p = transform.TransformPoint(p);
@@ -46,8 +46,8 @@ public class FormCubes : MonoBehaviour
         }
         else
         {
-            float theta = (Mathf.PI * 2.0f) / (float)AudioAnalyzer2.bandBuffer.Length;
-            for (int i = 0; i < AudioAnalyzer2.bandBuffer.Length; i += 1)
+            float theta = (Mathf.PI * 2.0f) / (float)AudioAnalyzer.bandBuffer.Length;
+            for (int i = 0; i < AudioAnalyzer.bandBuffer.Length; i += 1)
             {
                 Vector3 p = new Vector3(Mathf.Sin(theta * i) * radius, 0, Mathf.Cos(theta * i) * radius);
                 p = transform.TransformPoint(p);
@@ -84,8 +84,8 @@ public class FormCubes : MonoBehaviour
     
     void Update()
     {
-        transform.Rotate(Vector3.up, (AudioAnalyzer2.amplitude * 5) * rotaion * Time.deltaTime);
-        Debug.Log(AudioAnalyzer2.amplitude);
+        transform.Rotate(Vector3.up, (AudioAnalyzer.amplitude * 5) * rotaion * Time.deltaTime);
+        Debug.Log(AudioAnalyzer.amplitude);
     }
 	
 }
