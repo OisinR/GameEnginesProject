@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Rotate : MonoBehaviour
 {
@@ -9,16 +10,24 @@ public class Rotate : MonoBehaviour
     public enum Direction { up, down, left, right  };
     public Direction direction = new Direction();
 
+
+
     private void Start()
     {
         if(useRandom)
         {
             direction = (Direction)Random.Range(0, 3);
         }
+
+
     }
 
     void Update()
     {
+
+
+
+
         if (direction == Direction.up)
         {
             transform.Rotate(Vector3.up, (AudioAnalyzer.amplitude * 5) * rotaion * Time.deltaTime);
