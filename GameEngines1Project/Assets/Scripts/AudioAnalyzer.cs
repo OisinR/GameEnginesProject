@@ -27,7 +27,6 @@ public class AudioAnalyzer : MonoBehaviour
     public static float amplitude = 0.01f;
     public static float ampBuffer;
     float amplitudeHighest;
-    public float aP;
 
     public enum Channel { Stereo, left, Right};
     public Channel channel = new Channel();
@@ -41,7 +40,6 @@ public class AudioAnalyzer : MonoBehaviour
         bufferBand64 = new float[64];
 
         speaker = GetComponent<AudioSource>();
-        AudioProfile(aP);
     }
 
     
@@ -61,14 +59,6 @@ public class AudioAnalyzer : MonoBehaviour
     {
         speaker.GetSpectrumData(samplesL, 0, FFTWindow.Blackman);
         speaker.GetSpectrumData(samplesR, 1, FFTWindow.Blackman);
-    }
-
-    void AudioProfile(float aP)
-    {
-        for (int i = 0; i < 8; i++)
-        {
-            freqBandHighest[i] = aP;
-        }
     }
 
     public void MakeFreqBands(Channel channel)
