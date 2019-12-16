@@ -217,6 +217,7 @@ public class AudioAnalyzer : MonoBehaviour
         amplitude = currentAmp / amplitudeHighest;
         if(amplitude == 1)
         {
+            //for the start
             amplitude = 0.01f;
         }
         ampBuffer = currentAmpBuffer / amplitudeHighest;

@@ -30,18 +30,19 @@ public class Manager : MonoBehaviour
         {
             if (!menuUp)
             {
-                menu.alpha = 0f;
-                menu.blocksRaycasts = false;
+                menu.alpha = 1f;
+                menu.blocksRaycasts = true;
                 menuUp = !menuUp;
             }
 
             else
             {
-                menu.alpha = 1f;
-                menu.blocksRaycasts = true;
+                menu.alpha = 0f;
+                menu.blocksRaycasts = false;
                 menuUp = !menuUp;
             }
         }
+
 
     }
     
