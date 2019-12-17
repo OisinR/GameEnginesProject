@@ -42,7 +42,6 @@ public class FormCubes : MonoBehaviour
                 }
                 ParamCube pC = cube.AddComponent<ParamCube>();
                 pC.band = i;
-                pC.useBuffer = true;
                 pC.startScale = 0.5f;
                 pC.scaleMult = 0.05f;
             }
@@ -70,7 +69,6 @@ public class FormCubes : MonoBehaviour
                 }
                 ParamCube pC = cube.AddComponent<ParamCube>();
                 pC.use64 = true;
-                pC.useBuffer = true;
                 pC.band = i;
                 pC.startScale = 0.3f;
                 pC.scaleMult = 0.25f;
