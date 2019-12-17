@@ -6,7 +6,7 @@
 
 ###  Parts from myself vs parts that came from class or tutorials
 
-[!YouTube](https://www.youtube.com/playlist?list=PL3POsQzaCw53p2tA6AWf7_AWgplskR0Vo)
+https://www.youtube.com/playlist?list=PL3POsQzaCw53p2tA6AWf7_AWgplskR0Vo
 
 
 ### Most proud of
