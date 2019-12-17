@@ -16,7 +16,7 @@
 
 
 ### Instructions for building/running
-The project version is 2019.3.0b6, and a build of the visualiser is included in the project folder.
+The project version is 2019.3.0b6, and a PC build of the visualiser is included in the project folder.
 
 
 ### Controls
