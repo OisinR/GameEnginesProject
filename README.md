@@ -2,7 +2,7 @@
  
 ## Audio responsive music visualiser
 
-# Controls
+### Controls
 Left Control to Initialise Visualiser
 
 Left Alt to bring up and close settings
