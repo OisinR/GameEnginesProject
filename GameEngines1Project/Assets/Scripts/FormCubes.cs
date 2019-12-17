@@ -41,6 +41,7 @@ public class FormCubes : MonoBehaviour
                     cyl.transform.parent = this.transform;
                 }
                 ParamCube pC = cube.AddComponent<ParamCube>();
+                pC.multNo = 100;
                 pC.band = i;
                 pC.startScale = 0.5f;
                 pC.scaleMult = 0.05f;
@@ -69,6 +70,7 @@ public class FormCubes : MonoBehaviour
                 }
                 ParamCube pC = cube.AddComponent<ParamCube>();
                 pC.use64 = true;
+                pC.multNo = 100;
                 pC.band = i;
                 pC.startScale = 0.3f;
                 pC.scaleMult = 0.25f;

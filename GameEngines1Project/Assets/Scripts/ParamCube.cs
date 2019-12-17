@@ -14,6 +14,8 @@ public class ParamCube : MonoBehaviour
     private void Start()
     {
         mat = GetComponentInChildren<MeshRenderer>().materials[0];
+
+        //Enable emission
         mat.EnableKeyword("_EMISSION");
     }
 
@@ -21,9 +23,10 @@ public class ParamCube : MonoBehaviour
     {
         if (use64)
         {
-
+            //Do the stretching 
             transform.localScale = new Vector3(transform.localScale.x, (AudioAnalyzer.bandBuffer[band] * scaleMult) + startScale, transform.localScale.z);
 
+            //then do the colours
             Color colour = new Color(1, 0, 0, 1);
             mat.SetColor("_EmissionColor", colour * AudioAnalyzer.audioBand[band] * multNo);
 

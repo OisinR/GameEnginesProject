@@ -46,13 +46,22 @@ public class AudioAnalyzer : MonoBehaviour
     
     void Update()
     {
+        //gathers samples
         GetSpectrumData();
+
+        //turn those samples into something usable
         MakeFreqBands(channel);
         MakeFreqBands64(channel);
+
+        //and then make them less erratic
         BandBuffer();
         BandBuffer64();
+
+        //then normalise
         CreateAudioBands();
         CreateAudioBands64();
+
+        //and get the amplitude for rotation speed
         GetAmplitude();
     }
 	
