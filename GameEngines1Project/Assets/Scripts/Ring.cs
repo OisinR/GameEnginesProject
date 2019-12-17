@@ -18,6 +18,7 @@ public class Ring : MonoBehaviour
 
     void Update()
     {
+        //Does the flashing white ring on the Main Pipe
         Color colour = new Color(1, 1, 1, 1);
         mat.SetColor("_EmissionColor", colour * AudioAnalyzer.amplitude);
     }

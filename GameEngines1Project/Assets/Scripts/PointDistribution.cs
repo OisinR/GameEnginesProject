@@ -16,9 +16,10 @@ public class PointDistribution : MonoBehaviour
 
         foreach (Vector3 value in pts)
         {
+            //When we make the cube, also set all variables needed
             GameObject cube = Instantiate(cubePrefab);
             uspheres.Add(cube);
-            cube.GetComponent<ParamCube2>().band = bandNo;
+            cube.GetComponent<ParamCube>().band = bandNo;
             uspheres[i].transform.parent = transform;
             uspheres[i].transform.position = value * scaling;
             uspheres[i].transform.LookAt(new Vector3(0, 0, 0));
@@ -26,6 +27,8 @@ public class PointDistribution : MonoBehaviour
         }
     }
 
+
+    //Maths for Sphere creation
     Vector3[] PointsOnSphere(int n)
     {
         List<Vector3> upts = new List<Vector3>();

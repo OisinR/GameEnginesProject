@@ -13,7 +13,7 @@ public class AudioController : MonoBehaviour
 
     void Update()
     {
-
+        //If it's not alreay playing, play
         if(Input.GetKeyDown(KeyCode.Space) && !speaker.isPlaying)
         {
             speaker.Play();

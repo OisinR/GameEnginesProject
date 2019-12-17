@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LowerRing : MonoBehaviour
 {
-    float y = -1.47f;
+    //due to the proBuilder Pipe having it's origin off to the side, need to have this to stay centered
     Vector3 startPos = new Vector3(5.94f, -1.47f, 0);
     bool  canGO;
 

@@ -17,6 +17,7 @@ public class Lighting : MonoBehaviour
     
     void Update()
     {
+        //gets brighter and darker in time with the band its on
         bulb.intensity = (AudioAnalyzer.bandBuffer[band] * (max - min)) + min;
     }
 	

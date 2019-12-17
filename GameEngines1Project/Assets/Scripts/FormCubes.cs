@@ -14,6 +14,9 @@ public class FormCubes : MonoBehaviour
     public float scaleH = 0.5f;
     public float scaleCyl = 1f;
 
+
+    //This ones very similar to what we did in the Audio class
+
     void Start()
     {
         if (use64)
@@ -42,8 +45,6 @@ public class FormCubes : MonoBehaviour
                 pC.useBuffer = true;
                 pC.startScale = 0.5f;
                 pC.scaleMult = 0.05f;
-
-                //elements.Add(cube);
             }
         }
         else
@@ -60,15 +61,12 @@ public class FormCubes : MonoBehaviour
                 cube.transform.SetPositionAndRotation(p, q);
                 cube.transform.localScale = new Vector3(scaleW, scaleH, scaleW);
                 cube.transform.parent = this.transform;
-
-                //cube.transform.localRotation = Quaternion.Euler(-90, 0, 0);
                 if (cylen)
                 {
                     GameObject cyl = Instantiate(cylen2);
                     cyl.transform.SetPositionAndRotation(p, q);
                     cyl.transform.localScale = new Vector3(scaleCyl, scaleH, scaleCyl);
                     cyl.transform.parent = this.transform;
-                    //cyl.transform.eulerAngles = new Vector3(-90, transform.rotation.y, transform.rotation.z);
                 }
                 ParamCube pC = cube.AddComponent<ParamCube>();
                 pC.use64 = true;
@@ -77,8 +75,6 @@ public class FormCubes : MonoBehaviour
                 pC.startScale = 0.3f;
                 pC.scaleMult = 0.25f;
                 
-                
-                //elements.Add(cube);
             }
         }
     }
@@ -87,7 +83,6 @@ public class FormCubes : MonoBehaviour
     void Update()
     {
         transform.Rotate(Vector3.up, (AudioAnalyzer.amplitude * 5) * rotSpeed.value * rotaion * Time.deltaTime);
-        //Debug.Log(AudioAnalyzer.amplitude);
     }
 	
 }

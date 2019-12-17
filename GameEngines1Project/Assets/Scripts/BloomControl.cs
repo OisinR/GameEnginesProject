@@ -13,6 +13,7 @@ public class BloomControl : MonoBehaviour
 
     void Start()
     {
+        //some weird stuff to get it working
         volume = GetComponent<PostProcessVolume>();
         volume.profile.TryGetSettings(out bloomLayer);
     }

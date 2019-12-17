@@ -19,6 +19,7 @@ public class ScaleOnAmp : MonoBehaviour
     {
         if (useBuffer)
         {
+            //
             transform.localScale = new Vector3((AudioAnalyzer.amplitude * maxScale) + startScale, transform.localScale.y, (AudioAnalyzer.amplitude * maxScale) + startScale);
 
             Color colour = new Color(AudioAnalyzer.amplitude * red, AudioAnalyzer.amplitude * green, AudioAnalyzer.amplitude * blue);

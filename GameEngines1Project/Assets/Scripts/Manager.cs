@@ -19,6 +19,8 @@ public class Manager : MonoBehaviour
     {
         speaker = GetComponent<AudioSource>();
         aA = GetComponent<AudioAnalyzer>();
+
+        //Make sure the menu is on the right selection and Axes when we open it
         RotationRingsSelection(0);
     }
 

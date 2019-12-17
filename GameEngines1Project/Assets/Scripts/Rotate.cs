@@ -16,19 +16,16 @@ public class Rotate : MonoBehaviour
 
     private void Start()
     {
+        //If not set to random keep what we set it to, otherwise choose at start
         if(useRandom)
         {
             direction = (Direction)Random.Range(0, 3);
         }
-
-
     }
 
     void Update()
     {
-
-
-
+        //Apply rotations
 
         if (direction == Direction.up)
         {
@@ -46,8 +43,5 @@ public class Rotate : MonoBehaviour
         {
             transform.Rotate(Vector3.right, (AudioAnalyzer.amplitude * 5) * rotaion * rotSpeed.value * Time.deltaTime);
         }
-
-
     }
-	
 }
