@@ -2,6 +2,16 @@
  
 ## Audio responsive music visualiser
 
+### Description
+
+###  Parts from myself vs parts that came from class or tutorials
+
+### Most proud of
+
+### Instructions for building/running
+
+
+
 ### Controls
 Left Control to Initialise Visualiser
 
