@@ -6,10 +6,17 @@
 
 ###  Parts from myself vs parts that came from class or tutorials
 
+
+
+
 ### Most proud of
 
-### Instructions for building/running
 
+
+
+
+### Instructions for building/running
+The project version is 2019.3.0b6, and a build of the visualiser is included in the project folder.
 
 
 ### Controls
