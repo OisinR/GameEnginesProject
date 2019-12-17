@@ -26,7 +26,7 @@ public class Manager : MonoBehaviour
     {
         speaker.panStereo = pan.value;
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.LeftAlt))
         {
             if (!menuUp)
             {

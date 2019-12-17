@@ -24,7 +24,7 @@ public class Scale : MonoBehaviour
             }
             start = true;
         }
-        if(Input.GetKeyDown(KeyCode.P))
+        if(Input.GetKeyDown(KeyCode.LeftControl))
         {
             canGO = true;
         }

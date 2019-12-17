@@ -6124,7 +6124,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press E to close Settings
+  m_Text: Press Left Alt to close Settings
 --- !u!222 &581054791
 CanvasRenderer:
   m_ObjectHideFlags: 0

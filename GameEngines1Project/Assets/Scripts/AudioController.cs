@@ -9,20 +9,13 @@ public class AudioController : MonoBehaviour
     void Start()
     {
         speaker = GetComponent<AudioSource>();
-        //speaker.Play();
     }
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.R))
-        {
 
-            speaker.Stop();
-        }
-
-        if(Input.GetButtonDown("Jump") && !speaker.isPlaying)
+        if(Input.GetKeyDown(KeyCode.Space) && !speaker.isPlaying)
         {
-            Debug.Log(speaker.panStereo);
             speaker.Play();
         }
     }

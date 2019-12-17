@@ -11,7 +11,7 @@ public class LowerRing : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             canGO = true;
         }
